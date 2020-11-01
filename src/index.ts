@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 class Main {
-  url: string = "http://api.cotemig.com.br/v1/boletim";
+  url: string = "https://api.cotemig.com.br/v1/boletim";
   user: string = process.env.USER as string;
   password: string = process.env.PASSWORD as string;
   constructor() {
