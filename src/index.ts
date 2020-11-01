@@ -14,12 +14,11 @@ class Main {
   }
   async pegarNota() {
     try{
-      const data = await axios.get(url, {
-        headers: {
-          Authorization: `Basic ${Buffer.from(`${user}:${password}`).toString(
-            "base64"
-          )}`,
-        },
+      const data = await axios.get(url, {        
+        auth:{
+          username: user,
+          password
+        }
       });
       console.log(data.data)
     }catch(err){
