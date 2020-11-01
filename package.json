@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node dist/src/index.js --unhandled-rejections=strict"
+    "dev": "tsc && node dist/src/index.js",
+    "start": "node dist/src/index.js"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
