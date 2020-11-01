@@ -29,6 +29,10 @@ class Main {
       });
 
       fs.writeFileSync("../notas.txt", JSON.parse(disciplinas));
+      fs.open('../notas.txt','w', (err,file)=>{
+        if (err) throw err;
+        console.log('Abriu');
+      })
     } catch (err) {
       console.log(err);
     }
