@@ -5,7 +5,7 @@ dotenv.config();
 
 class Main {
   url: string = "https://api.cotemig.com.br/v1/boletim";
-  user: string = process.env.USER as string;
+  user: string = process.env.USERNAME as string;
   password: string = process.env.PASSWORD as string;
   constructor() {
     this.pegarNota();
@@ -13,11 +13,10 @@ class Main {
   async pegarNota() {
     try {
       const data = await axios.get(this.url, {
-        headers: {
-          Authorization: `Basic ${Buffer.from(`${this.user}:${this.password}`).toString(
-            "base64"
-          )}`,
-        },
+        auth:{
+          username: this.user,
+          password: this.password
+        }
       });
       console.log(data.data);
     } catch (err) {
