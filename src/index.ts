@@ -1,6 +1,5 @@
 import axios from "axios";
 import dotenv from "dotenv";
-import fs, { read } from "fs";
 
 dotenv.config();
 
@@ -27,12 +26,7 @@ class Main {
           return 0;
         })
       ));
-
-      fs.writeFileSync("../notas.txt", JSON.parse(disciplinas));
-      fs.open('../notas.txt','w', (err,file)=>{
-        if (err) throw err;
-        console.log('Abriu');
-      })
+      console.log(disciplinas);
     } catch (err) {
       console.log(err);
     }
