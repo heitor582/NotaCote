@@ -36,7 +36,13 @@ class Main {
         })
       })
       
-      console.log();
+      disciplinas = disciplinas.disciplinas.sort((a: { id: number; }, b: { id: number; }) => {
+        if (a.id > b.id) return -1;
+        if (a.id < b.id) return 1;
+        return 0;
+      })
+
+      console.log(disciplinas);
     } catch (err) {
       console.log(err);
     }
