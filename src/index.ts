@@ -26,7 +26,17 @@ class Main {
           return 0;
         })
       ));
-      console.log(disciplinas);
+      let notas: any = [];
+      for(let i: number = 0; i < disciplinas.length(); i++){
+        for(let j:number = 0; j < disciplinas[i]; j++){
+          if(notas[j]['materia'] == disciplinas[i][j]['nome']){
+            notas[j]['nota'] += disciplinas[i][j]['avaliacoes'][4]['valor']
+          }else{
+            notas.push({materia: disciplinas[i][j]['nome'], nota: disciplinas[i][j]['avaliacoes'][4]['valor']})
+          }
+        }
+      }
+      console.log(notas);
     } catch (err) {
       console.log(err);
     }
