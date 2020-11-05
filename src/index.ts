@@ -29,7 +29,7 @@ class Main {
       let notas: any = [];
       for(let i of disciplinas){
         for(let j of i){
-          console.log(j)
+          
         }
       }
       console.log(notas);
