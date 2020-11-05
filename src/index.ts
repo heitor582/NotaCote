@@ -27,12 +27,8 @@ class Main {
         })
       ));
       let notas: any = [];
-      for(let i of disciplinas){
-        for(let j of i){
-          
-        }
-      }
-      console.log(notas);
+      
+      console.log(disciplinas);
     } catch (err) {
       console.log(err);
     }
