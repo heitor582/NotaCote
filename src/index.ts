@@ -28,8 +28,8 @@ class Main {
       ));
       let notas: any = [];
       for(let i: number = 0; i < disciplinas.length; i++){
-        console.log(disciplinas[i])
         for(let j:number = 0; j < disciplinas[i]; j++){
+          console.log(disciplinas[i][j]['avaliacoes'][4]['valor'])
           if(notas[j]['materia'] == disciplinas[i][j]['nome']){
             notas[j]['nota'] += disciplinas[i][j]['avaliacoes'][4]['valor']
           }else{
